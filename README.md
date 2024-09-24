@@ -2,7 +2,7 @@
 
 This is a VSCode devcontainer for PSX development using PSN00bSDK. It is based on the Ubuntu devcontainer provided by Microsoft. The devcontainer is setup to build and debug a sample project provided by PSN00bSDK.
 
-Trying to get this consistenly running on my host machine was a pain and I Kept forgetting how it was set up. I'm a fan of NixOS and I wanted to have a consistent development environment. This is my attempt to make it easier for myself and others to get started with PSX development.
+Trying to get this consistently running on my host machine was a pain and I kept forgetting how it was set up. I'm a fan of NixOS and I wanted to have a consistent development environment. This is my attempt to make it easier for myself and others to get started with PSX development.
 
 ## Setup
 
