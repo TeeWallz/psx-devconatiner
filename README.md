@@ -11,7 +11,7 @@ Trying to get this consistently running on my host machine was a pain and I kept
 - Set your host's IP in .vscode/launch.json `target`
 - If a different demo is desired, change executable and load .elf files in .vscode/launch.json
 - Open dev container
-- Untill TODO is finished, run below commands in dev container to install VScodes recommended extensions
+- Until TODO is finished, run below commands in dev container to install VScodes recommended extensions
   - `./.devcontainer/install-vscode-extensions.sh`
 - Debug using F5
 - The sample project should build and open in PCSX Redux
