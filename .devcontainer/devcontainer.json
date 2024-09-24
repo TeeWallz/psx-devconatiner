@@ -1,0 +1,37 @@
+{
+  "name": "Ubuntu - PSX Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // custom settings
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "extensions.verifySignature": false
+      }
+    },
+    "extensions": [
+      "ms-vscode.cpptools",
+      "ms-vscode.cmake-tools",
+      "ms-vscode.cpptools",
+      "spmeesseman.vscode-taskexplorer",
+      "GitHub.vscode-pull-request-github",
+      "webfreak.debug"
+    ],
+    // Thanks vscode for above not working  a lot of the time
+    "postCreateCommand": "code --install-extension ms-vscode.cpptools && code --install-extension ms-vscode.cmake-tools && code --install-extension ms-vscode.cpptools && code --install-extension spmeesseman.vscode-taskexplorer && code --install-extension GitHub.vscode-pull-request- && code --install-extension webfreak.debug"
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [3333],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
+  // Mount the source code into the container to keep it in sync.
+  "mounts": ["source=.,target=/workspace,type=bind,consistency=cached"],
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
