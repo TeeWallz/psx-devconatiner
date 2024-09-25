@@ -20,6 +20,8 @@ Trying to get this consistently running on my host machine was a pain and I kept
 
 - [ ] How to get VSCode to respect the default extension settings
 - [ ] Include PsyQ SDK sample project setup
+- [ ] How to create and bootstrap a new project
+
 
 ## Directories of interest
 

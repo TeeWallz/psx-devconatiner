@@ -68,29 +68,11 @@ RUN mkdir -p /opt/sample_projects/psn00bsdk/ && \
   cmake --preset default . && \
   cmake --build ./build
 
-# Untill i can get VSCode to respect the .vscode/settings.json extension settings
-RUN chmod +x /workspaces/psx_development/.devcontainer/install_vscode_extensions.sh
-  
-# # RUN code --install-extension ms-vscode.cpptools && \
-#     code --install-extension ms-vscode.cmake-tools && \
-#     code --install-extension ms-vscode.cpptools && \
-#     code --install-extension spmeesseman.vscode-taskexplorer && \
-#     code --install-extension GitHub.vscode-pull-request-github && \
-#     code --install-extension webfreak.debug
-
-# PSYQ - .symtab local symbol at index 16 (>= sh_info of 16)
-# RUN apt-get install -y g++-mipsel-linux-gnu gdb-multiarch make gzip
-
-# RUN mkdir -p /opt/sample_projects/psyq/ && \
-#     git clone https://github.com/NDR008/VSCodePSX.git /opt/sample_projects/psyq/ && \
-#     cd /tmp && \
-#     wget https://psx.arthus.net/sdk/Psy-Q/psyq-4.7-converted-full.7z && \
-#     7z x -o/tmp/psyq -r -y psyq-4.7-converted-full.7z && \
-#     rm -rf /tmp/psyq/include && \
-#     mv /tmp/psyq/* /opt/sample_projects/psyq/third_party/psyq && \
-#     rm -rf /tmp/psyq && \
-#     rm psyq-4.7-converted-full.7z && \
-#     cd /opt/sample_projects/psyq/
-#     # make
+# Lightweight sample PSN00bSDK project
+RUN mkdir -p /opt/sample_projects/psn00bsdk_new_project && \
+    cp -r /opt/psn00bsdk/share/template/* /opt/sample_projects/psn00bsdk_new_project/ && \
+    cd /opt/sample_projects/psn00bsdk_new_project/ && \
+  cmake --preset default . && \
+  cmake --build ./build
 
 WORKDIR /workspace
